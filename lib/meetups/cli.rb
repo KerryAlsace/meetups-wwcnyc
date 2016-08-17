@@ -9,13 +9,16 @@ class Meetups::CLI
   def list_meetups
     puts "WomenWhoCodeNYC's Upcoming Meetups:"
     @meetups = Meetups::Event.upcoming
+    @meetups.each.with_index(1) do |event, i|
+      puts "#{i} #{event.name} - #{event.date}"
+    end
   end
 
   def menu
     input = nil
     while input != "exit"
       puts "Enter the number of a meetup to see more details, or type list to see the list of meetups, or type exit."
-      input = gets.strip
+      input = gets.strip.downcase
       case input
       when "1"
         puts "More info on 1..."
