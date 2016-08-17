@@ -1,5 +1,7 @@
-require "meetups/version"
+require 'meetups/version'
+require 'meetups/cli'
+require 'meetups/meetup'
 
-module Meetups
-  # Your code goes here...
-end
+require 'open-uri'
+require 'nokogiri'
+require 'pry'
