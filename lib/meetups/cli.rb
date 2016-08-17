@@ -8,10 +8,7 @@ class Meetups::CLI
 
   def list_meetups
     puts "WomenWhoCodeNYC's Upcoming Meetups:"
-    puts <<-DOC.gsub /^\s*/, ''
-    1. #HIREWWCode- How to Negotiate your Salary with a Corporation on Tue Aug 23
-    2. Holiday - Labor Day on Mon Sep 5
-    DOC
+    @meetups = Meetups::Event.upcoming
   end
 
   def menu

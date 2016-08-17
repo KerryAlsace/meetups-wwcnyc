@@ -1,6 +1,6 @@
 require 'meetups/version'
 require 'meetups/cli'
-require 'meetups/meetup'
+require 'meetups/event'
 
 require 'open-uri'
 require 'nokogiri'
