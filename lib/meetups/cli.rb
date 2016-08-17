@@ -8,7 +8,7 @@ class Meetups::CLI
 
   def list_meetups
     puts "WomenWhoCodeNYC's Upcoming Meetups:"
-    @meetups = Meetups::Event.upcoming
+    @meetups = Meetups::Event.scrape_meetups
     @meetups.each.with_index(1) do |event, i|
       puts "#{i} #{event.name} - #{event.date}"
     end

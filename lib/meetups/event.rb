@@ -1,21 +1,5 @@
 class Meetups::Event
-  attr_accessor :name, :date, :time, :location, :address, :url, :events
-
-  def initialize
-    @events = []
-  end
-
-  def self.events
-    @events
-  end
-
-  def self.upcoming
-    # binding.pry
-    #self.scrape_meetups returns array of events
-    #self.events = nil for some reason
-    @events = self.scrape_meetups
-    @events
-  end
+  attr_accessor :name, :date, :time, :location, :address, :url
 
   def self.scrape_meetups
     # Scrape WWCNYC meetups page and add events and their details to @events array
