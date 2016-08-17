@@ -19,17 +19,19 @@ class Meetups::CLI
     while input != "exit"
       puts "Enter the number of a meetup to see more details, or type list to see the list of meetups, or type exit."
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "More info on 1..."
-      when "2"
-        puts "More info on 2..."
-      when "list"
+
+      if input.to_i > 0
+        event_details = @meetups[input.to_i - 1]
+        puts "Event: #{event_details.name}"
+        puts "When: #{event_details.date} at #{event_details.time}"
+        puts "Where: #{event_details.location} at #{event_details.address}"
+        puts "RSVP at #{event_details.url}"
+      elsif input == "list"
         list_meetups
-      when "exit"
+      elsif input == "exit"
         return
       else
-        puts "Not sure what you want"
+        puts "Not sure what you want, type list or exit"
       end
     end
   end
