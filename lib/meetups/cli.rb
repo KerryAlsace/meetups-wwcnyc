@@ -1,0 +1,7 @@
+class Meetups::CLI
+
+
+
+
+  
+end
