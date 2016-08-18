@@ -7,7 +7,7 @@ This Ruby Gem provides a CLI to view the list of upcoming [Meetup events](https:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'meetups'
+gem 'meetups-wwcnyc'
 ```
 
 And then execute:
@@ -16,13 +16,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install meetups
+    $ gem install meetups-wwcnyc
 
 ## Usage
 
 Type the following line and follow the on-screen prompts.
 
-    $ meetups
+    $ meetups-wwcnyc
 
 ## Development
 

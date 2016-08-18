@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'meetups/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "meetups"
+  spec.name          = "meetups-wwcnyc"
   spec.version       = Meetups::VERSION
   spec.authors       = ["Kerry Dougherty"]
   spec.email         = ["kerrydougherty@gmail.com"]
