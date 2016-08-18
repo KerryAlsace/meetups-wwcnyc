@@ -6,7 +6,7 @@ require 'meetups/version'
 Gem::Specification.new do |spec|
   spec.name          = "meetups"
   spec.version       = Meetups::VERSION
-  spec.authors       = ["KerryAlsace"]
+  spec.authors       = ["Kerry Dougherty"]
   spec.email         = ["kerrydougherty@gmail.com"]
 
   spec.summary       = "Write a short summary, because Rubygems requires one."
