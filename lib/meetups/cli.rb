@@ -20,7 +20,7 @@ class Meetups::CLI
       puts "Enter the number of a meetup to see more details, or type list to see the list of meetups, or type exit."
       input = gets.strip.downcase
 
-      if input.to_i > 0
+      if input.to_i > 0 && @meetups[input.to_i - 1]
         event_details = @meetups[input.to_i - 1]
         puts "Event: #{event_details.name}"
         puts "When: #{event_details.date} at #{event_details.time}"
