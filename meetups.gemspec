@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Kerry Dougherty"]
   spec.email         = ["kerrydougherty@gmail.com"]
 
-  spec.summary       = "Write a short summary, because Rubygems requires one."
-  spec.description   = "Write a longer description or delete this line."
+  spec.summary       = "CLI to find upcoming WWC-NYC Meetup events"
+  spec.description   = "CLI gem that allows users to receive a list of upcoming WomenWhoCode - NYC meetups, and get event details for those meetups."
   spec.homepage      = "https://github.com/KerryAlsace/meetups-wwcnyc"
   spec.license       = "MIT"
 
