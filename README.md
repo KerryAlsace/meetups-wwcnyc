@@ -1,6 +1,6 @@
 # Meetups
 
-This Ruby Gem provides a CLI to view the list of upcoming Meetup events for the New York City chapter of WomenWhoCode. More information about WomenWhoCode can be found at https://www.womenwhocode.com/ and information about the NYC chapter can be found at https://www.womenwhocode.com/nyc 
+This Ruby Gem provides a CLI to view the list of upcoming [Meetup events](https://www.meetup.com/WomenWhoCodeNYC/) for the [New York City chapter](https://www.womenwhocode.com/nyc) of [WomenWhoCode](https://www.womenwhocode.com/).
 
 ## Installation
 
