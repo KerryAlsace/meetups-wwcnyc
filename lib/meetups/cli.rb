@@ -3,15 +3,14 @@ class Meetups::CLI
   def call
     list_meetups
     menu
-    goodbye
   end
 
   def list_meetups
     puts ""
     puts "---------- WomenWhoCodeNYC's Upcoming Meetups: ----------"
     puts ""
-    @meetups = Meetups::Event.scrape_meetups
-    @meetups.each.with_index(1) do |event, i|
+    Meetups::EventScraper.scrape_meetups
+    Meetups::Event.all.each.with_index(1) do |event, i|
       puts "#{i}. #{event.name} - #{event.date}"
     end
     puts ""
@@ -25,8 +24,8 @@ class Meetups::CLI
       puts ""
       input = gets.strip.downcase.gsub("'", "")
 
-      if input.to_i > 0 && @meetups[input.to_i - 1]
-        event_details = @meetups[input.to_i - 1]
+      if input.to_i > 0 && Meetups::Event.all[input.to_i - 1]
+        event_details = Meetups::Event.all[input.to_i - 1]
         puts ""
         puts "********** #{event_details.name} **********"
         puts ""
@@ -39,7 +38,7 @@ class Meetups::CLI
       elsif input == "list"
         list_meetups
       elsif input == "exit"
-        return
+        goodbye
       else
         puts ""
         puts "Make sure you're typing a number between #{@meetups.index(@meetups.first) + 1} - #{@meetups.index(@meetups.last) + 1} or the word 'list' or 'exit'."
