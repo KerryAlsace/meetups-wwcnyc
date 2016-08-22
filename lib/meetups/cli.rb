@@ -41,7 +41,7 @@ class Meetups::CLI
         goodbye
       else
         puts ""
-        puts "Make sure you're typing a number between #{@meetups.index(@meetups.first) + 1} - #{@meetups.index(@meetups.last) + 1} or the word 'list' or 'exit'."
+        puts "Make sure you're typing a number between #{Meetups::Event.all.index(Meetups::Event.all.first) + 1} - #{Meetups::Event.all.index(Meetups::Event.all.last) + 1} or the word 'list' or 'exit'."
       end
     end
   end
