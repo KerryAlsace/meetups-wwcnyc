@@ -9,6 +9,7 @@ class Meetups::CLI
     puts ""
     puts "---------- WomenWhoCodeNYC's Upcoming Meetups: ----------"
     puts ""
+    Meetups::Event.destroy
     Meetups::EventScraper.scrape_meetups
     Meetups::Event.all.each.with_index(1) do |event, i|
       puts "#{i}. #{event.name} - #{event.date}"

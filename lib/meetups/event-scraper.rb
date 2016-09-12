@@ -6,7 +6,6 @@ class Meetups::EventScraper
     first_level = doc.css("div#events-list-module ul.event-list li.event-item").to_a
     unless first_level.include?("past")
       first_level.each.with_index do |event, i|
-        event = Meetups::Event.new
         unless doc.css("div.event-content div.event-desc")[i].text.include?("Place holder")
           event = Meetups::Event.new
           event.name = doc.css("h3.flush--bottom span")[i].text

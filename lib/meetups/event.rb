@@ -11,8 +11,8 @@ class Meetups::Event
     @@events
   end
 
-  # def self.destroy
-  #   @@events = []
-  # end
-      
+  def self.destroy
+    @@events = []
+  end
+
 end
